@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+    
+</head>
+<body>  
+
+    <header>
+        <h1> My Tube</h1>
+        <h4><i>You should be watching</i></h4>
+    </header>
+
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Pages/Col1.html">Anime Collection</a>
+        <a href="./Pages/Col2.html">Tech Collection</a>
+        <a href="./Pages/Col3.html">Game Collection</a>
+        <a href="./Form.html">New Video</a>
+    </nav>
+    <header>
+        <!--Page title-->
+        <h2><b> Add New Video </b></h2>
+    </header>
+    <hr>
+
+    <form action="action_page.php">
+        
+        <section class="form_space">
+            <!--Video title-->
+            <label for="title"><b> Video Title</b></label><br>
+            <input required type="text" placeholder="Video Title">
+
+            <br><br>
+            <!--Description box-->
+            <label for="Description"><b> Description</b></label><br>
+            <textarea name="Description" id="Description" cols="30" rows="6" placeholder="What is the video about?"></textarea>
+
+            <br><br>
+            <!--video file input-->
+            <label for="video"><b> Video </b></label><br>
+            <input type="file" id="video" name="video">
+
+            <br><br>
+            <!--Choose collection-->
+            <label for="Collection">Choose Collection</label><br>
+            <input list="Collection" name="Collection" placeholder="Choose Collection">
+            <datalist id="Collection">
+                <option value="Anime "></option>
+                <option value="Tech "></option>
+                <option value="Game "></option>
+            </datalist>
+
+            <br><br>
+            <!--Status field-->
+            <input type="radio" name="status" id="Public">
+            <label for="Public">Public</label>
+
+            <input type="radio" name="status" id="Private">
+            <label for="Private">Private</label>
+            
+            <br><br>
+            <input class="submit-button" type="submit">
+
+        </section>
+    </form>
+
+    <!--Footer/Copyright-->
+    <hr>
+    <footer>
+        <h4>Copyright--</h4>
+    </footer>
+
+    
+</body>
+</html>

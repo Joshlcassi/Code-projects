@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mobile Form</title>
+</head>
+<body>
+  <div class="navbar">
+    <nav class="menu">
+      <button aria-expanded= "false" aria-controls="menu-list">
+        <span class="open">&#9776;</span>
+        <span class="close">&times;</span>
+      </button>
+
+      <ul id="menu-list">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <h2>Contacts</h2>
+
+    <img src="./mobile Icons/magnifying-glass-solid.svg" alt="search">
+    <img src="./mobile Icons/ellipsis-vertical-solid.svg" alt="settings">
+  </div>
+
+  <div class="mobile-form">
+    <form class="mobform" action="action.php">
+
+      <img src="./mobile Icons/user-solid.svg" alt="user" class="user-icon">
+      <input type="text" name="name" id="name" placeholder="Name" class="user-input">
+
+      <img src="./mobile Icons/phone-solid.svg" alt="phone" class="phone-icon">
+      <input type="number" id="phone" size="10" max="9999999999" min="0000000000" placeholder="Phone Number" class="phone-input"> 
+
+      <img src="./mobile Icons/location-dot-solid.svg" alt="Address" class="address-icon">
+      <input type="text" name="address" id="address" placeholder="address" class="address-input">
+
+      <input type="text" name="city" id="city" placeholder="City" class="city-input">
+
+      <input list="state" name="state" id="state" class="state-input" placeholder="State">
+      <datalist id = "state">
+        <option value="New York">
+        <option value="New Jersey">
+        <option value="New Mexico">
+        <option value="New Hampshire">
+      </datalist>
+
+      <input type="number" id="zip" size="5" max="99999" min="00000" placeholder=" Zip" class="zip-input"> 
+
+      <img src="./mobile Icons/envelope-solid.svg" alt="email" class="email-icon">
+      <input type="text" name="email" id="email" placeholder="Email" class="email-input">
+
+      <img src="./mobile Icons/cake-candles-solid.svg" alt="bday" class="bday-icon">
+      <input type="date" name="bday" id="bday" placeholder="Birthday" class="bday-input">
+    </form>
+  </div>
+
+
+  <script>
+    const navbutton = document.querySelector('button[aria-expanded]');
+
+    function toggleNav({target}){
+      const expanded = target.getAttribute('aria-expanded') === 'true'|| false;
+      navbutton.setAttribute('aria-expanded', !expanded);
+    }
+    navbutton.addEventListener('click', toggleNav);
+  </script>
+</body>
+</html>

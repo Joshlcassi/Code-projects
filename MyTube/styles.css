@@ -1,0 +1,113 @@
+body{
+   background-image: url(https://images.unsplash.com/photo-1635545195955-e65d68631341?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&w=1000&q=80);
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+h1,h3,h4,a,nav,p{
+   text-align: center;
+   color: rgb(252, 215, 4);
+   text-shadow:3px 3px 5px black;
+}
+
+h1{
+   font-size: 48px;
+   margin: 10px;
+}
+h2{
+   font-size: 35px;
+   color: rgb(252, 215, 4);
+   text-shadow:2px 2px 5px black;
+}
+
+h3{font-size: 28px;}  
+
+table{
+   border: 5px groove rgb(252, 215, 4);
+}
+
+iframe{
+   width: 600px;
+   height: 315px;
+   border-radius: 5px;
+}
+
+
+.center{
+   margin-left: auto;
+   margin-right: auto;
+}
+
+td{
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.vid_info
+{
+   padding: 50px,0px,0px,0px;
+   display: block;
+   width: 1000px;
+   height: 500px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.paragraph
+{
+   width: 50%;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+}
+p{
+   font-size: 20px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-transform:capitalize;
+   text-indent:50px;
+   letter-spacing:1.5px;
+   line-height:2;
+}
+
+form
+{
+   margin-left:auto ;
+   margin-right: auto;
+   background-color: #b9c0c9;
+   font-size: 24px;
+   text-align: left;
+   height: 650px;
+   width: 600px;
+   border: 5px groove rgb(252, 215, 4);
+   opacity: .9;
+}
+
+label{
+   color: rgb(252, 215, 4);
+   font-size: 25px;
+   text-shadow:2px 2px 5px black;
+}
+
+.form_space{
+   margin:0px 30px 0px 30px;
+   padding:30px 0px 0px 0px;
+}
+
+input[type=text],textarea,input[list]{
+   width:100%;
+   border-radius:5px;
+ }
+
+.submit-button{
+   background-color:#87a096;
+   border-radius:5px;
+   position:relative;
+   left:13%;
+   height:50px;
+   margin:30px 0px 0px 0px;
+   width:75%;
+ }

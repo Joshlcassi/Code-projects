@@ -1,0 +1,268 @@
+body{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: papayawhip;
+}
+img{max-width: 100%;}
+
+.outline{
+   display: grid;
+	grid-gap: 20px;
+	max-width: 1200px;
+   margin: auto;
+}
+.menu ul{
+   display: grid;
+   grid-template-columns: repeat(3,40px);
+   column-gap: 10px;
+   list-style: none;
+   justify-content: end;
+   padding-right: 20px;
+   
+}
+.menu a{
+   text-align: right;
+   text-decoration: none;
+   color: #6b6b6b;
+
+}
+
+[aria-controls="menu-list"]{
+	display: none;
+}
+
+.about_us{
+   display: grid;
+   text-align: center;
+   margin-left: 25px;
+   margin-right: 25px;
+}
+
+.about_us h1{
+   font-size: 50px;
+   color: #6b6b6b;
+   margin-bottom: 0px;
+}
+
+.about_us p{
+   color: #999;
+   font-size: 16px;
+   margin-bottom: 25px;
+}
+
+.scene{
+   display: grid;
+   grid-template-columns:repeat(3, 1fr);
+   grid-gap: 20px;
+   grid-template-areas: 
+   "batcave gotham manor"
+   "d_b d_g d_m";
+}
+
+.batcave{grid-area: batcave;}
+.gotham{grid-area: gotham;}
+.manor{grid-area: manor;}
+.details_b{grid-area: d_b;}
+.details_g{grid-area: d_g;}
+.details_m{grid-area: d_m;}
+
+.scene h2{
+   font-size: 25px;
+   color: #6b6b6b;
+}
+
+.scene p{
+   font-size: 16px;
+   color: #999;
+}
+
+.our_team{
+   display: grid;
+   text-align: center;
+   margin-left: 15%;
+   margin-right: 15%;
+}
+
+.our_team h2{
+   font-size: 30px;
+   color: #999;
+   margin-bottom: 0px;
+}
+
+.our_team p{
+   color: #999;
+   font-size: 16px;
+   margin-bottom: 25px;
+}
+
+.squad{
+   display: grid;
+   grid-template-columns:repeat(4, 1fr);
+   column-gap: 20px;
+   justify-items: center;
+}
+
+.icon{
+   height: 200px;
+   width: 200px;
+}
+
+.member h4{
+   margin: 5px;
+}
+
+.links,.links_L,.links_I,.links_T,.links_F{
+   width: 25px;
+   height: 25px;
+}
+
+.contact_info{
+   margin-top: 20px;
+   margin-left: 0%;
+   margin-right: 0%;
+   padding-top: 50px;
+   padding-bottom: 100px;
+   background-color: #282828;
+}
+
+.social{
+   display: grid;
+   grid-template-columns: repeat(8,1fr);
+   justify-items: center;
+   color: #777;
+   grid-template-areas: 
+   "links_I ig links_F faceb links_L linked links_T twitt";
+   
+}
+
+.social .links,.social .links_T,.social .links_F,.social .links_L,.social .links_I{
+   color: #777;
+   background-color: aliceblue;
+   border: 5px solid aliceblue;
+   border-radius: 100%; ;
+}
+.ig{grid-area: ig;}
+.linked{grid-area:linked ;}
+.faceb{grid-area: faceb;}
+.twitt{grid-area:twitt ;}
+.links_T{grid-area: links_T;}
+.links_F{grid-area: links_F;}
+.links_I{grid-area: links_I;}
+.links_L{grid-area: links_L;}
+
+
+.company_info{
+   display: grid;
+   color: #777;
+   grid-template-columns: repeat(3,1fr);
+   column-gap: 10px;
+   justify-items: center;
+}
+
+.company_info h4{color: white;}
+
+.copyright{
+   color: #777;
+   text-align: center;
+}
+
+@media(max-width:768px)
+{
+   .scene{
+      grid-template-columns: repeat(2,1fr);
+      grid-template-areas: 
+      "batcave d_b"
+      "gotham d_g"
+      "manor d_m";
+   }
+   .squad{
+      grid-template-columns: repeat(2,2fr);
+   }
+   .member{
+      padding-bottom: 10px;
+      text-align: center;
+   }
+
+   .menu{
+		order: -1;
+		perspective: 800px;
+	}
+
+	.menu ul{
+		max-height: 0;
+		overflow: hidden;
+		transform: rotateX(90deg);
+		transition: all 0.5s;
+	}
+
+	[aria-controls="menu-list"]{
+		display: block;
+		margin-bottom: 10px;
+      float: right;
+	}
+
+	[aria-expanded="true"]~ ul{
+		display: grid;
+		max-height: 500px;
+		transform:rotateX(0) ;
+      padding-right: 25px;
+	}
+
+
+	[aria-expanded ="false"].close{
+		display: none;
+	}
+
+	[aria-expanded ="true"].close{
+		display: inline-block;
+	}
+
+	[aria-expanded ="true"].open{
+		display: none;
+	}
+
+
+}
+
+@media(max-width:600px)
+{
+   .scene{
+      grid-template-columns: repeat(1,1fr);
+      grid-template-areas: 
+      "batcave"
+      "d_b"
+      "gotham"
+      "d_g"
+      "manor"
+      "d_m";
+      text-align: center;
+   }
+   .squad{
+      grid-template-columns: repeat(1,1fr);
+      justify-items: center
+   }
+   .member{padding-bottom: 10px;}
+
+   .icon{
+      width: auto;
+      height: auto;
+   }
+
+   .social{
+     
+      grid-template-columns: repeat(2,100px);
+      justify-content: center;
+      justify-items: center;
+      grid-template-areas: 
+      "  links_I ig "
+      "  links_F faceb "
+      "  links_L linked "
+      "  links_T twitt ";
+   }
+
+   .company_info{
+      grid-template-columns: repeat(1,1fr);
+      justify-items: center;
+      text-align: center;
+   }
+
+}

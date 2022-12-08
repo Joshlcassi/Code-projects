@@ -1,0 +1,109 @@
+body{
+   margin: 0;
+   padding: 0%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background-color: blanchedalmond;
+}
+.navbar{
+   background-color: azure;
+   padding:10px;
+   text-align: right;
+   color: brown;
+   box-shadow: 0px -2px 7px black;
+   margin-bottom: 10px;
+}
+
+.navbar > a{
+   color: brown;
+   text-decoration: none;
+   padding:0 10px;
+}
+
+section{
+   padding: 10px;
+   max-width: 1000px;
+   margin:0 auto;
+}
+
+section h2{
+   text-align: center;
+   color: coral;
+}
+
+.portfolio-grid{
+   display: grid;
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: repeat(3,1fr); 
+   gap: 10px;
+   justify-items: center;
+}
+
+.portfolio-item{
+   height: 150px;
+   width: 150px;
+   background-color: crimson;
+   padding: 10px;
+}
+
+.portfolio-item:nth-child(even){
+   background-color: transparent;
+   border: 5px solid silver;
+}
+
+.contact-grid{
+   display: grid;
+   grid-template-columns: repeat(5,1fr);
+   grid-template-rows: 1fr 1fr;
+   gap: 10px;
+   grid-template-areas: 
+   " form form . faceb insta"
+   " form form . snap twitt";
+}
+
+
+.faceb, .twitt, .snap, .insta{
+   width: 175px;
+   height: 175px;
+   background-color: crimson;
+   border-radius: 5px;
+   text-align: center;
+}
+
+.faceb > span,
+.twitt > span,
+.snap > span,
+.insta > span{
+   text-align: center;
+   position: relative;
+   top: 40%;
+}
+
+.form{ grid-area: form;}
+.faceb{ grid-area: faceb;}
+.twitt{ grid-area: twitt;}
+.snap{ grid-area: snap;}
+.insta{ grid-area: insta;}
+
+label{
+   display: block;
+   margin-bottom: 10px;
+}
+
+input, textarea{
+   display: block;
+   margin-bottom: 10px;
+   border: 2px solid crimson;
+   border-radius: 5px;
+   width: 100%;
+}
+
+
+footer{
+   background-color: azure;
+   padding:10px;
+   text-align: center;
+   color: brown;
+   box-shadow: 0px 2px 7px black;
+   margin-top: 10px;
+}
+

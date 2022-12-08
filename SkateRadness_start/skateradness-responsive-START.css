@@ -1,0 +1,221 @@
+body {
+	font-size: 16px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+  background: #333;;
+  border: 0;
+	padding: 10px 20px;
+	color: white;
+	border-radius: 5px;
+}
+
+img { max-width: 100%; }
+
+.home-container{
+	display: grid;
+	grid-gap: 20px;
+	max-width: 1200px;
+   margin: auto;
+}
+
+.hero{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	"hero hero skate1"
+	"hero hero skate2";
+}
+
+.hero--header{
+	grid-area: hero;
+	background: white url('images/hero-skateboard.jpeg');
+	min-height: 400px;
+	background-size: cover;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	background-position: bottom right;
+}
+
+.hero--header > *{
+	background-color: white;
+	padding: 5px;
+}
+
+.cta{
+	background-color: #333;
+	display:grid;
+	align-items: center;
+	justify-items: center;
+	align-content: center;
+	color: white;
+}
+
+.cta p:first-child{ font-size: 20px;}
+.cta p{margin: 0px;}
+.price{
+	font-size: 50px;
+	font-weight: 300;
+}
+
+.skate-1{grid-area: "skate1";}
+.skate-2{grid-area: "skate2";}
+
+.menu ul{
+	display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+   list-style: none;
+   grid-gap: 10px;
+   padding: 0px;
+}
+
+.menu a{
+	display: block;
+	text-align: center;
+	background: #333;
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   padding: 10px;
+   font-size: 20px;
+   border-radius: 5px;
+}
+
+[aria-controls="menu-list"]{
+	display: none;
+}
+
+.features{
+	display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   grid-gap: 20px;
+}
+
+.feature{
+	background: white;
+    box-shadow: 0 0 4px #333;
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+}
+
+.feature .icon{
+	width: 75px;
+   height: 75px;
+}
+
+.feature p{
+	color: rgba(0, 0, 0,.5);
+}
+
+.learn-more h2{margin-top: 0px;}
+
+.learn-more-alt .about__details{text-align: right;}
+
+.learn-more, .learn-more-alt{
+	display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 40px;
+   padding: 50px;
+   align-items: center;
+}
+
+.learn-more-alt img{
+	grid-column: 2/3;
+	grid-row: 1/2;
+}
+
+.skate-gallery{
+	display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   grid-gap: 20px;
+}
+
+.skate-gallery h2{
+	display: grid;
+   grid-template-columns: 1fr auto 1fr;
+   grid-column: 1/-1;
+   grid-gap: 20px;
+   align-items: center;
+}
+
+.skate-gallery h2:before, .skate-gallery h2:after{
+	display: block;
+	content: '';
+	height: 10px;
+	background: linear-gradient(to left,#333, transparent);
+}
+.skate-gallery h2:after{
+	background: linear-gradient(to right,#333, transparent);
+}
+
+@media (max-width:700px)
+{
+	.hero{
+		grid-template-areas: 
+		"hero hero "
+		"skate1 skate2";
+	}
+
+	.hero--header{
+		min-height: 300px;
+	}
+
+	.skate-1, .skate-2{
+		text-align: center;
+	}
+
+	.learn-more, .learn-more-alt{
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.learn-more-alt img{
+		grid-row: initial;
+		grid-column: initial;
+	}
+	.learn-more-alt .about__details{
+		text-align: center;
+	}
+
+	.menu{
+		order: -1;
+		perspective: 800px;
+	}
+
+	.menu ul{
+		max-height: 0;
+		overflow: hidden;
+		transform: rotateX(90deg);
+		transition: all 0.5s;
+	}
+
+	[aria-controls="menu-list"]{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	[aria-expanded="true"]~ ul{
+		display: grid;
+		max-height: 500px;
+		transform:rotateX(0) ;
+	}
+
+
+	[aria-expanded ="false"].close{
+		display: none;
+	}
+
+	[aria-expanded ="true"].close{
+		display: inline-block;
+	}
+
+	[aria-expanded ="true"].open{
+		display: none;
+	}
+
+	
+}

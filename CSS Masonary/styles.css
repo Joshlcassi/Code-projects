@@ -1,0 +1,85 @@
+
+.container {
+   display:grid;
+   justify-items:stretch;
+   justify-content:stretch;
+   grid-template-columns:repeat(13,1fr) ;
+   grid-template-rows:repeat(11,25px); 
+   gap:5px;
+   grid-template-areas:
+     "box1 box1 box1 box1 box2 box2 box3 box3 box4 box4 box4 box4"
+     "box1 box1 box1 box1 box2 box2 box3 box3 box4 box4 box4 box4"
+     "box1 box1 box1 box1 box2 box2 box5 box5 box6 box7 box7 box7"
+     "box1 box1 box1 box1 box2 box2 box5 box5 box6 box7 box7 box7"
+     "box1 box1 box1 box1 box2 box2 box5 box5 box8 box8 box8 box8"
+     "box9 box9 box10 box10 box2 box2 box5 box5 box8 box8 box8 box8"
+     "box9 box9 box11 box11 box2 box2 box5 box5 box8 box8 box8 box8"
+     "box9 box9 box11 box11 box2 box2 box5 box5 box8 box8 box8 box8"
+     "box9 box9 box11 box11 box12 box12 box12 box12 box8 box8 box8 box8"
+     "box13 box13 box13 box13 box12 box12 box12 box12 box8 box8 box8 box8"
+     "box13 box13 box13 box13 box12 box12 box12 box12 box14 box14 box14 box14" ;
+     
+ }
+
+ body{
+   box-sizing: border-box;
+ }
+
+ img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+ .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12, .box13, .box14 
+ {
+    
+    border-radius: 5px;
+    text-align: center;
+ }
+ 
+ .box1{
+   background-color: red; 
+   grid-area:box1;
+}
+ .box2{
+   background-color: blanchedalmond;
+   grid-area:box2;}
+ .box3{
+   background-color: cadetblue;
+   grid-area:box3;}
+ .box4{
+   background-color: seagreen;
+   grid-area:box4;}
+ .box5{
+   background-color: lightblue;
+   grid-area:box5;}
+ .box6{
+   background-color: navajowhite;
+   grid-area:box6;}
+ .box7{
+   background-color: mediumaquamarine;
+   grid-area:box7;}
+ .box8{
+   background-color: tan;
+   grid-area:box8;}
+ .box9{
+   background-color: thistle;
+   grid-area:box9;}
+ .box10{
+   background-color:burlywood;
+   grid-area:box10;}
+ .box11{
+   background-color: khaki;
+   grid-area:box11;}
+ .box12{
+   background-color: lightgreen;
+   grid-area:box12;}
+ .box13{
+   background-color: lightpink;
+   grid-area:box13;}
+ .box14{
+   background-color: lightcoral;
+   grid-area:box14;}
