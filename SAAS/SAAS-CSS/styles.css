@@ -7,10 +7,30 @@
   transition: ease-in-out 0.3s;
 }
 
+[aria-controls="navbar-dropdown"]{
+  display: none;
+}
+
 .navbar.nav{
   display: flex;
   justify-content: space-between;
+  padding: 0px 30px;
+  background-color: rgba(240, 248, 255, 1);
 }
+
+.navbar-toggle{
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar-toggle span{
+  color: var(--white);
+  font-size: var(--size-20);
+  font-weight: 600;
+  cursor: pointer;
+  pointer-events: none;
+}
+
 .nav img{
   width: var(--size-150);
   height: var(--size-100);
@@ -23,7 +43,7 @@
 }
 
 .navlink a{
-  font-size: var(--size-20);
+  font-size: var(--size-16);
   margin: 10px;
 }
 
@@ -35,16 +55,14 @@
   color: var(--font-color-link);
 }
 
-[aria-controls="navbar-dropdown"]{
-  display: none;
-}
-
 .empower-header-bg{
   background-image: linear-gradient(45deg,#efe5fd,#f2fde4);
 }
 
 .empower-header{
-  padding: 150px 0px;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  position: relative;
 }
 
 .empower{
@@ -64,14 +82,6 @@
   font-size: var(--size-16);
   margin: 20px 5px;
 }
-
-/*
-.gdrive-icon img, .google-icon img, .asana-icon img, .atlas-icon img, .paypal-icon img, .weave-icon img, .calendar-icon img{
-  width: 100%;
-  max-width: 100%;
-  vertical-align: middle;
-  border-style: none;
-}*/
 
 .google-icon, .gdrive-icon{
   background-color: white;
@@ -93,49 +103,97 @@
 
 .google-icon{
   position: absolute;
-  top: 15%;
+  top: 26%;
   right: 40%;
+  animation-timing-function: ease;
+  animation:goo-movement 300ms ease-in-out 0s 1 normal both  ;
 }
 
 .atlas-icon{
   position: absolute;
-  top: 15%;
+  top: 26%;
   right: 25%;
+  animation:at-movement 2s ease-in 2s  ;
 }
 
 .asana-icon{
   position:absolute;
-  top: 15%;
+  top: 26%;
   right: 5%;
+  animation:as-movement 300ms ease-in-out 0s 1 normal both  ;
 }
 
 .paypal-icon{
   position:absolute;
-  top: 35%;
+  top: 54%;
   right: 42%;
+  animation:pa-movement 2s ease-in 2s  ;
 }
 
 .weave-icon{
   position:absolute;
-  top: 35%;
+  top: 54%;
   right: 17%;
+  animation:we-movement 300ms ease-in-out 0s 1 normal   ;
 }
 
 .gdrive-icon{
   position:absolute;
-  top: 55%;
+  top: 75%;
   right: 30%;
+  animation:gd-movement 2s ease-in 2s  ;
 }
 
 .calendar-icon{
   position:absolute;
-  top:60%;
-  right: 5%;
+  top:88%;
+  right: 8%;
+  animation:ca-movement 300ms ease-in-out 0s 1 normal both  ;
 }
+
+@keyframes goo-movement{
+  0% {  bottom: 0%;}
+  100% { top:26%; }
+}
+
+@keyframes at-movement{
+  0% {  bottom: 0%;}
+  100% { top:26%; }
+}
+
+@keyframes as-movement{
+  0% {  bottom: 0%;}
+  100% { top:26%; }
+}
+
+@keyframes pa-movement{
+  0% {  bottom: 0%;}
+  100% { top:54%; }
+}
+
+@keyframes we-movement{
+  0% {  bottom: 0%;}
+  100% { top:54%; }
+}
+
+@keyframes gd-movement{
+  0% {  bottom: 0%;}
+  100% { top:75%; }
+}
+
+@keyframes ca-movement{
+  0% {  bottom: 0%;}
+  100% { top:88%; }
+}
+
+
+
+
+
 
 .key-benefits{
   text-align: center;
-  padding: 200px 20px;
+  padding: 20% 0%;
 }
 
 .key-header h2{
@@ -159,14 +217,30 @@
 }
 
 .benefit-card{
-  border: 1px solid gray;
+  border: 0px solid gray;
   text-align: left;
   padding: 10px;
-  box-shadow: 0 0 10px rgba(104, 124, 176, 0.5);
+  box-shadow: 0 0 15px #979797;
 }
+
+
 
 .benefit-card img{
   width: 80px;
+}
+
+.benefit-card:hover{
+  animation: card 300ms ease-in-out 0s 1 normal both;
+}
+
+@keyframes card{
+  0%{
+    transform: scale(1);
+  }
+
+  100%{
+    transform: scale(1.2);
+  }
 }
 
 .banner-bg{
@@ -177,15 +251,17 @@
 .software-for-people{
   display: flex;
   text-align:left ;
+  justify-content: space-between;
 }
 
 .sfp-content{
   align-self: center;
-  padding-left: 60px;
+  padding-left: 5%;
+  max-width: 40%;
 }
 
 .software-for-people img{
-  padding-top: 300px;
+  padding-top: 200px;
   margin: 0px;
 }
 
@@ -208,7 +284,7 @@
   justify-items: center;
   grid-template-rows: repeat(2,100px);
   justify-content: space-around;
-  padding-top: 80px;
+  padding-top: 15%;
 }
 
 .why-front-dots{
@@ -239,10 +315,14 @@
   font-weight: 600;
 }
 
+.video-box{
+  position: relative;
+}
+
 .btn-banner{
   position: absolute;
   left: 50%;
-  top: 327% ;
+  top: 46% ;
   background-color: var(--white);
   box-shadow: 0 0 10px rgba(104, 124, 176, 0.5);
   width: 100px;
@@ -264,23 +344,17 @@
 }
 
 .hub-dots{
-  width: 215px;
+  width: 58%;
   z-index: -1;
-  display: block;
   position: absolute;
-  margin-top: 128px;
+  left: -15%;
+  top: 19%;
 }
 
 .hub-user{
   width: 100%;
   margin-left: 60px;
-}
-
-.hub-user img{
-  width: 100%;
-  max-width: 100%;
-  vertical-align: middle;
-  border-style: none;
+  position: relative;
 }
 
 .hub-bio{
@@ -352,7 +426,7 @@
 }
 
 .main-card{
-  box-shadow: 0 0 10px rgba(104, 124, 176, 0.5);
+  box-shadow: 0 0 20px rgb(55 64 85 / 96%);
   margin: 10px 50px; 
   max-width: 35%;
 }
@@ -389,7 +463,7 @@
 
 .price-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit ,minmax(200px,1fr));
+  grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(auto-fit ,minmax(220px,1fr));
   column-gap: 50px;
   row-gap: 50px;
@@ -417,7 +491,7 @@
 }
 
 .testimonial{
-  margin: 20px 0px 20px 50px;
+  margin: 2% 0px 2% 5%;
   align-self: center;
 }
 
@@ -426,7 +500,7 @@
 }
 
 .testimonial p, .testimonial hr{
-  margin: 0px 370px 40px 0px;
+  margin: 0px 50% 40px 0px;
   font-size: 20px;
 }
 
@@ -499,7 +573,6 @@
 
 .started {
   width: 170px;
-  height: 70px;
   justify-self: center;
 }
 
@@ -537,6 +610,14 @@
   row-gap: 15px;
 }
 
+.front-info-link span{
+  background-color:var(--bg-button) ;
+  color: var(--white);
+  font-size: 10px;
+  border-radius: 3px;
+  padding: 2px 5px;
+}
+
 .front-info-tabs h3{
   color: var(--black);
   font-size: 24px;
@@ -549,10 +630,12 @@
 .front-copyright-sectional{
   display: flex;
   justify-content: space-between;
+  padding-bottom: 50px;
 }
 
 .breadcrumb-nav li{
   display: inline;
+  padding: 10px;
 }
 
 .breadcrumb-nav li+li:before{
@@ -560,13 +643,35 @@
   content: ">";
 }
 
+.breadcrumb-nav a{
+  font-size: 18px;
+}
+
 .front-copyright-links{
   display: flex;
   justify-content: space-evenly;
+  gap: 30px;
 }
 
 .front-copyright-links a{
   font-size: 25px;
+  background-color: var(--font-color-light);
+  border: 0px solid var(--font-color-light);
+  border-radius: 10px;
+  padding: 0px 11px;
+}
+
+.front-copyright-links a:hover{
+  color: var(--font-color-light);
+  background-color: var(--font-color-base);
+}
+
+.front-copyright-info{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--font-color-base);
+  margin: 5px 15%;
 }
 
 

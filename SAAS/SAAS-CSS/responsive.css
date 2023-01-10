@@ -1,0 +1,457 @@
+@media screen and (min-width:1300px){
+  body,nav{
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+}
+
+
+@media screen and (max-width:768px){
+  [aria-controls="navbar-dropdown"]{
+    display: block;
+  }
+
+  [aria-expanded="false"] ~ ul{
+    display: none;
+  }
+
+  [aria-expanded="true"] ~ ul{
+    display: grid;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border-top: 1px solid var(--font-color-base);
+    width: 100%;
+    text-align: center;
+    background-color: var(--white);
+    box-shadow: 0px 0px 20px rgb(52 49 75 / 10%);
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 50px;
+    padding-top: 60px;
+    column-gap: 0;
+    padding-bottom: 40%;
+  }
+
+  .navbar li:last-child{
+    grid-column: 3;
+    padding: 15px;
+  }
+
+  .navbar-toggle span{
+    color: var(--font-color-base);
+  }
+
+  .empower-header{
+    padding-top: 100px;
+    padding-bottom: 50%;
+    text-align: center;
+  }
+
+
+  .empower{
+    margin: 0% 26%;
+    max-width: max-content;
+  }
+
+  .google-icon{
+    top: 60%;
+    left: 15%;
+  }
+  
+  .atlas-icon{
+    top: 60%;
+    left: 40%;
+  }
+  
+  .asana-icon{
+    top: 60%;
+    right: 10%;
+  }
+  
+  .paypal-icon{
+    top: 72%;
+    left: 17%;
+  }
+  
+  .weave-icon{
+    top: 73%;
+    right: 28%;
+  }
+  
+  .gdrive-icon{
+    top: 86%;
+    left: 36%;
+  }
+  
+  .calendar-icon{
+    position:absolute;
+    top:88%;
+    right: 8%;
+  }
+
+  .benefit-grid{
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 30px;
+  }
+
+  .software-for-people{
+    display: grid;
+    text-align: center;
+  }
+
+  .sfp-content{
+    max-width: 100%;
+    padding:0% 0% 5% 0%;
+  }
+
+  .software-for-people img{
+    padding-top: 0px;
+  }
+
+  .btn-banner{
+    left: 44%;
+    top: 42%;
+  }
+
+  .hub{
+    display: grid;
+    row-gap: 15%;
+  }
+
+  .hub-user{
+    max-width: 50%;
+    justify-self: center;
+  }
+
+  .hub-bio{
+    text-align: center;
+    margin-left: 0%;
+  }
+
+  .hub-bio p{
+    margin: 30px 50px;
+    font-size: 20px;
+  }
+
+  .brand-grid{
+    grid-template-columns: repeat(5,100px);
+  }
+
+  .price-info{
+    display: block;
+    text-align: center;
+  }
+
+  .main-card{
+    max-width: 100%;
+    padding-bottom: 10px;
+  }
+
+  .main-card a{
+    margin: 0%;
+  }
+
+  .pricing-info-card{
+    text-align: left;
+  }
+
+  .hire-us{
+    display: block;
+    padding-bottom: 20px;
+  }
+
+  .testimonial{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .testimonial div:first-child{
+    align-self: center;
+    max-width: 50%;
+  }
+
+  .testimonial div:last-child{
+    align-self: center;
+  }
+
+  .testimonial p, .testimonial hr,.testimonial h3{
+    margin: 5% 0%;
+    font-size: 16px;
+  }
+
+  .testimonial h3 + p{
+    padding-bottom: 10px;
+  }
+
+  .get-started-form{
+    padding-bottom: 5%;
+  }
+
+  .contact-front{
+    max-width: 100%;
+  }
+
+  .contact-info a{
+    font-size: 14px;
+  }
+
+  .front-info-tabs{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .front-info-tabs h3{
+    font-size: 20px;
+  }
+
+  .breadcrumb-nav a{
+    font-size: 14px;
+  }
+
+  .front-copyright-links{
+    gap: 20px;
+  }
+
+  .front-copyright-links a{
+    font-size: 18px;
+  }
+
+  .front-copyright-info{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width:360px){
+
+  [aria-expanded="true"] ~ ul{
+    display: block;
+    padding-bottom: 20%;
+  }
+
+  .navbar li{
+    padding-bottom:5% ;
+  }
+
+  .empower{
+    margin: 10% 0% 25%;
+  }
+
+  .empower h1{
+    font-size: 28px;
+  }
+
+  .empower a, .empower p{
+    font-size: 12px;
+    margin: 15px 0px;
+  }
+
+  .google-icon, .gdrive-icon{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+  }
+
+  .atlas-icon, .asana-icon, .paypal-icon, .weave-icon, .calendar-icon{
+    width: 50px;
+    height: 50px;
+  }
+
+  .key-header p{
+    font-size: 14px;
+  }
+
+  .benefit-grid{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .benefit-card{
+    font-size: 12px;
+  }
+
+  .benefit-card img{
+    width:40px;
+  }
+
+  .sfp-content h2{
+    font-size: 24px;
+    margin: 10% 14%;
+  }
+
+  .sfp-content a{
+    font-size: 14px;
+  }
+
+  .block-text.why-front h2{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 2%;
+  }
+
+  .block-text.why-front p{
+    font-size: 12px;
+    margin: 0% 10%;
+  }
+
+  .why-front-grid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    row-gap: 10px;
+    margin: 0% 12%;
+  }
+  
+  .why-front-grid div{
+    font-size: 12px;
+    align-self: center;
+    justify-self: flex-start;
+  }
+
+  .basic{
+    grid-row: 1;
+    grid-column: 2;
+  }
+  
+  .components{
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .combined{
+    grid-row: 3;
+    grid-column: 2;
+  }
+
+  .p-layouts{
+    grid-row: 4;
+    grid-column: 2;
+  }
+
+  .btn-banner{
+    left:40% ;
+    top:40% ;
+    width:50px ;
+    height: 50px;
+  }
+
+  .btn-banner i{
+    font-size: 15px;
+  }
+
+  .hub{
+    padding: 10% 0%;
+  }
+
+  .hub-user{
+    max-width: 85%;
+  }
+
+  .hub-bio img{
+    margin: 0%;
+  }
+
+  .hub-bio p{
+    margin: 0%;
+  }
+
+  .brands h3{
+    font-size: 26px;
+    padding-top: 5%;
+  }
+
+  .brand-grid{
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+    row-gap: 20px;
+  }
+
+  .brand-grid img{
+    width: 100px;
+  }
+
+  .main-card{
+    margin: 0%;
+  }
+
+  .main-card h2,.main-card p, .main-card hr, .main-card a{
+    margin: 2%;
+  }
+
+  .price-grid{
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 15px;
+    padding-top: 10%;
+  }
+
+  .testimonial{
+    display: block;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .testimonial div:first-child{
+    max-width: 100%;
+  }
+
+  .testimonial h2{
+    padding-top: 5%;
+  }
+
+  .get-started-form{
+    grid-template-columns: repeat(1,1fr);
+    padding-bottom: 10%;
+  }
+
+  .form-start h3{
+    font-size: 16px;
+    padding-top: 10%;
+  }
+
+  .more-info, .opt-in-label, .started{
+    grid-column: 1;
+  }
+
+  .started{
+    width: 150px;
+    height: 45px;
+    padding: 3%;
+  }
+
+  .contact-info{
+    display: block;
+  }
+
+  .front-info-tabs{
+    grid-template-columns: repeat(1,1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .front-copyright-sectional{
+    display: block;
+  }
+
+  .front-copyright-sectional div{
+    margin: 5%;
+    
+  }
+
+  .breadcrumb-nav li{
+    padding: 5px;
+  }
+
+  .front-copyright-info{
+    margin: 0%;
+  }
+
+  .front-copyright-links{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+  }
+
+  .front-copyright-links a:last-child{
+    grid-column: 1/5;
+  }
+}
+
+

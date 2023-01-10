@@ -3,7 +3,7 @@
   --black:#000;
   --font-color-base:#666;
   --font-color-dark:#212529;
-  --font-color-light:#b0aebe;
+  --font-color-light:#e4e8f0;
   --font-color-link:#57a6ff;
   --footer:#34314b;
   --footer-base:#2e2b45;
@@ -75,8 +75,8 @@ a:hover{color: var(--font-color-link);}
 
 .container{
   width: 100%;
-  padding-left: var(--size-14);
-  padding-right: var(--size-14);
+  padding-left: var(--size-30);
+  padding-right: var(--size-30);
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,7 +100,7 @@ a:hover{color: var(--font-color-link);}
   border: 0px solid var(--bg-button);
   transition: ease-in-out .3s;
   color: var(--white);
-  padding: 20px 35px;
+  padding: 10px 25px;
   font-size: 18px;
 }
 
@@ -116,12 +116,11 @@ a:hover{color: var(--font-color-link);}
   border: 0px solid var(--bg-button);
   transition: ease-in-out .3s;
   color: var(--white);
-  padding: 5px 15px;
+  padding: 1% 4%;
   font-size: 12px;
 }
 
 @media (min-width:1200px){
-  /*
-  .container{max-width: 1140px;} */
+
 }
 
